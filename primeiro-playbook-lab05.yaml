@@ -1,0 +1,11 @@
+---
+-
+  name: Teste
+  hosts: web
+  become: yes
+  vars:
+  remote_user: ansible
+
+  tasks:
+  - name: Instala a ferramenta net-tools
+    yum: name=net-tools state=latest
